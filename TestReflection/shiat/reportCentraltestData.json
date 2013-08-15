@@ -1,0 +1,208 @@
+[
+    {
+    "TabName":"Sales", 
+    "Subtabs":
+        [
+            {  
+            "SubTabName":"Administrative",
+            "SubTabContents":
+                [
+                "Daily Closeout",
+                "Cash Drawer",
+                "Prospects",
+                "Rewards"
+                ]
+            },
+            {
+            "SubTabName":"General Sales",
+            "SubTabContents":
+                [
+                "Sales",
+                "Sales by Service",
+                "Sales by Category",
+                "Gift Cards",
+                "Sales by Rep",
+                "Contract Sales"
+                ]
+            },
+            {
+            "SubTabName":"Sales Analysis",
+            "SubTabContents":
+                [
+                "Attendance With Revenue",
+                "Revenue by Class",
+                "Outstanding Series",
+                "Sales Forecast",
+                "Gift Card Analysis",
+                "Earned Revenue",
+                "Best Sellers",
+                "Average Revenue Analysis"
+                ]
+            },
+            {
+            "SubTabName":"Post Sale",
+            "SubTabContents":
+                [
+                "Returns",
+                "Sales Tax",
+                "Voided Sales"
+                ] 
+            }
+        ]
+    },
+    
+    {
+    "TabName":"Payment Processing", 
+    "Subtabs":
+        [
+            {  
+            "SubTabName":"AutoPays",
+            "SubTabContents":
+                [
+                "AutoPay CC Expirations",
+                "Autopay Detail",
+                "Autopay Expirations",
+                "Autopay Summary",      
+                ]
+            },
+            {
+            "SubTabName":"CC and ACH Management",
+            "SubTabContents":
+                [
+                "Approved Transactions",
+                "Pending Transactions",
+                "Voided or Rejected Transactions",
+                "Settled Transactions"
+                ]
+            }
+        ]
+    },
+    {
+    "TabName":"Clients", 
+    "Subtabs":
+        [
+            {  
+            "SubTabName":"Visits and Retention",
+            "SubTabContents":
+                [
+                "Series Expirations",
+                "Last Visit",
+                "Visits Remaining",
+                "First Visit",
+                "No Return",
+                "Retention",
+                "Client Arrivals",
+                "Martial Arts Belt Promotion",
+                "No Shows",
+                "Attendance",
+                "Retention Management",
+                "Cancellations"
+                ]
+            },
+            {
+            "SubTabName":"Consumermode",
+            "SubTabContents":
+                [
+                "Entry Logs",
+                "Online Metrics"
+                ]
+            },
+            {
+            "SubTabName":"Marketing",
+            "SubTabContents":
+                [
+                "Membership",
+                "Mailers and Data Exports",
+                "Big Spenders",
+                "New Members",
+                "Client Indexes",
+                "Promotions",
+                "GeoAnalytics",
+                "Referral Sources",
+                "Referrers"
+                ]
+            },
+            {
+            "SubTabName":"ClientAccounts",
+            "SubTabContents":
+                [
+                "Account Balances",
+                "Unpaids",
+                "Contact Logs",
+                "Event Payments",
+                "Clients per Teacher"
+                ]
+            }
+        ]
+    },
+    {
+    "TabName":"Staff",
+    "Subtabs":
+        [
+            {
+            "SubTabName":"Productivity",
+            "SubTabContents":
+                [
+                "Performance",
+                "Retail Sales Performance",
+                "Appointment Metrics",
+                "Clients per Teacher",
+                "Trainer Conversions"
+                ]
+            },
+            {
+            "SubTabName":"Payroll",
+            "SubTabContents":
+                [
+                "Payroll",
+                "Commission",
+                "Pay Rates",
+                "Tips",
+                "Payroll Export Setup",
+                "Time Clock",
+                "Assistants"
+                ]
+            },
+            {
+            "SubTabName":"Administrative",
+            "SubTabContents":
+                [
+                "Schedule at a Glance",
+                "Staff Schedule",
+                "Phone Book",
+                "Staff Activity",
+                "Tasks"
+                ]
+            }
+        ]
+    },
+    {
+    "TabName":"Inventory",
+    "Subtabs":
+        [
+            {
+            "SubTabName":"Management",
+            "SubTabContents":
+                [
+                "Inventory on Hand",
+                "Manage Online Orders",
+                "Inventory Age",
+                "Inventory Change Log"
+                ]
+            },
+            {
+            "SubTabName":"Sales",
+            "SubTabContents":
+                [
+                "Cost of Goods Sold",
+                "Sales by Product",
+                "Sales by Supplier",
+                "Retail Sales Performance"
+                ]
+            }
+        ]
+    }
+]
+
+
+

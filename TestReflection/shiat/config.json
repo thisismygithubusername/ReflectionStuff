@@ -1,0 +1,9 @@
+{
+   "Subdomain": "ohcanada",
+   "Domain": "mindbodyonline.com",
+   "GridIP": "172.20.0.41",
+   "ImplicitWait": "4",
+   "SiteProvisioner": "sideswipe",
+   "DriverEnvironment": "grid",
+   "Browser": "chrome"
+}

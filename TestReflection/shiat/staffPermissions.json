@@ -1,0 +1,565 @@
+[
+{
+	"permissions":["Staff Phone Book"],
+	"checkboxes":["M_RPT_STAFF_PHONE"],
+	"verification":
+	[
+	{
+		"linkId":"phoneBook",
+		"verifierType":"name",
+		"verifier":"optStaffType"
+	}
+	]
+},
+{
+	"permissions":["Schedule at a Glance / Attendance (Everyone's schedule)"], 
+	"checkboxes":["M_RPT_DAY"],
+	"verification":
+	[
+	{
+		"linkId":"scheduleAtAGlance",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"attendanceAnalysis",
+		"verifierType":"id",
+		"verifier":"optAnalysisBy"
+	},
+	{
+		"linkId":"staffSchedule",
+		"verifierType":"id",
+		"verifier":"staffScheduleTag"
+	},
+	{
+		"linkId":"trainerConversions",
+		"verifierType":"name",
+		"verifier":"requiredtxtVisitType"
+	}
+	]
+},
+{
+	"permissions":["Schedule at a Glance / Attendance (Everyone's schedule)", "Attendance with Revenue"], 
+	"checkboxes":["M_RPT_DAY", "M_RPT_ATTND_REV"],
+	"verification":
+	[
+	{
+		"linkId":"attendanceWithRevenue",
+		"verifierType":"name",
+		"verifier":"optPurLoc"
+	}
+	]
+},
+{
+	"permissions":["Schedule at a Glance / Attendance (Everyone's schedule)", "Cancellations"], 
+	"checkboxes":["M_RPT_DAY","M_RPT_CANC"],
+	"verification":
+	[
+	{
+		"linkId":"cancellations",
+		"verifierType":"name",
+		"verifier":"optClient"
+	}
+	]
+},
+{
+	"permissions":["Account Balances & Invoices"], 
+	"checkboxes":["M_RPT_ACCTBAL"],
+	"verification":
+	[
+	{
+		"linkId":"accountBalances",
+		"verifierType":"id",
+		"verifier":"accountBalancesHeader"
+	}
+	]
+},
+{
+	"permissions":["Event Invoices"], 
+	"checkboxes":["M_RPT_EVENT_INVOICE"],
+	"verification":
+	[
+	{
+		"linkId":"eventPayments",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	}
+	]
+},
+{
+	"permissions":["Cash Drawer - Run for current date"], 
+	"checkboxes":["M_RPT_CASHDRAW"],
+	"verification":
+	[
+	{
+		"linkId":"cashDrawer",
+		"verifierType":"id",
+		"verifier":"report-name"
+	}
+	]
+},
+{
+	"permissions":["Daily Closeout"], 
+	"checkboxes":["M_RPT_CASH_CLOSEOUT"],
+	"verification":
+	[
+	{
+		"linkId":"dailyCloseout",
+		"verifierType":"id",
+		"verifier":"optIncludePrepaid"
+	}
+	]
+},
+{
+	"permissions":["Sales / Sales by Category / Sales by Services"], 
+	"checkboxes":["M_RPT_SALES"],
+	"verification":
+	[
+	{
+		"linkId":"bigSpenders",
+		"verifierType":"id",
+		"verifier":"bigSpendersGenTag"
+	},
+	{
+		"linkId":"bestSellers",
+		"verifierType":"id",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"returns",
+		"verifierType":"id",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"promotions",
+		"verifierType":"name",
+		"verifier":"optPromotion"
+	},
+	{
+		"linkId":"sales",
+		"verifierType":"name",
+		"verifier":"optIncludeAutoRenews"
+	},
+	{
+		"linkId":"salesByCategory",
+		"verifierType":"name",
+		"verifier":"optComparePeriod"
+	},
+	{
+		"linkId":"salesByService",
+		"verifierType":"name",
+		"verifier":"optType"
+	},
+	{
+		"linkId":"salesByRep",
+		"verifierType":"name",
+		"verifier":"optRep"
+	},
+	{
+		"linkId":"salesTax",
+		"verifierType":"name",
+		"verifier":"optEmployee"
+	},
+	{
+		"linkId":"voidedSales",
+		"verifierType":"name",
+		"verifier":"optDisMode"
+	},
+	{
+		"linkId":"prospects",
+		"verifierType":"id",
+		"verifier":"prospectsHeader"
+	},
+	{
+		"linkId":"rewards",
+		"verifierType":"name",
+		"verifier":"optDisMode"
+	}
+	]
+},
+{
+	"permissions":["Sales by Supplier / Sales by Product"], 
+	"checkboxes":["M_RPT_SALESITEM"],
+	"verification":
+	[
+	{
+		"linkId":"costOfGoodsSold",
+		"verifierType":"name",
+		"verifier":"optSaleLoc"
+	},
+	{
+		"linkId":"contractSales",
+		"verifierType":"id",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"salesByProduct",
+		"verifierType":"name",
+		"verifier":"optProduct"
+	},
+	{
+		"linkId":"salesBySupplier",
+		"verifierType":"name",
+		"verifier":"optSupplier"
+	}
+	]
+},
+{
+	"permissions":["Gift Card"], 
+	"checkboxes":["M_RPT_GIFT_CARDS"],
+	"verification":
+	[
+	{
+		"linkId":"giftCards",
+		"verifierType":"name",
+		"verifier":"optSaleLoc"
+	}/*,
+	{
+		"linkId":"giftCardAnalysis",
+		"verifierType":"null",
+		"verifier":""
+	}*/
+	]
+},
+{
+	"permissions":["Inventory Reports"], 
+	"checkboxes":["M_RPT_INV"],
+	"verification":
+	[
+	{
+		"linkId":"inventoryOnHand",
+		"verifierType":"name",
+		"verifier":"optLoc"
+	},
+	{
+		"linkId":"inventoryAge",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"inventoryChangeLog",
+		"verifierType":"name",
+		"verifier":"optSupplier"
+	}
+	]
+},
+{
+	"permissions":["Marketing Reports"], 
+	"checkboxes":["M_RPT_MARKETING"],
+	"verification":
+	[
+	{
+		"linkId":"firstVisit",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"lastVisit",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateLastVisit"
+	},
+	{
+		"linkId":"modifyTaggedClients",
+		"verifierType":"name",
+		"verifier":"EmptyTagged"
+	},
+	{
+		"linkId":"noReturn",
+		"verifierType":"name",
+		"verifier":"optPackage"
+	},
+	{
+		"linkId":"seriesExpirations",
+		"verifierType":"name",
+		"verifier":"optSeriesType"
+	},
+	{
+		"linkId":"visitsRemaining",
+		"verifierType":"name",
+		"verifier":"optPeriod"
+	},
+	{
+		"linkId":"mailersDataExports",
+		"verifierType":"id",
+		"verifier":"mailersReport"
+	},
+	{
+		"linkId":"referralSources",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"referrers",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	}
+	]
+},
+{
+	"permissions":["Analysis Reports"], 
+	"checkboxes":["M_RPT_ANALYSIS"],
+	"verification":
+	[
+	{
+		"linkId":"martialArtsBeltPromotion",
+		"verifierType":"id",
+		"verifier":"optBeltClassType"
+	},
+	{
+		"linkId":"averageRevenueAnalysis",
+		"verifierType":"name",
+		"verifier":"optTG"
+	},
+	{
+		"linkId":"clientArrivals",
+		"verifierType":"id",
+		"verifier":"clientArrivalReportHeader"
+	},
+	{
+		"linkId":"geoAnalytics",
+		"verifierType":"id",
+		"verifier":"awiViewer__tContainer"
+	},
+	{
+		"linkId":"noShows",
+		"verifierType":"name",
+		"verifier":"optNoShowType"
+	},
+	{
+		"linkId":"earnedRevenue",
+		"verifierType":"name",
+		"verifier":"optSummary"
+	},
+	{
+		"linkId":"outstandingSeries",
+		"verifierType":"name",
+		"verifier":"requiredtxtAsOfDate"
+	},
+	{
+		"linkId":"revenueByClass",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	}
+	]
+},
+{
+	"permissions":["Schedule at a Glance / Attendance (Everyone's schedule)", "Analysis Reports"], 
+	"checkboxes":["M_RPT_DAY","M_RPT_ANALYSIS"],
+	"verification":
+	[
+	{
+		"linkId":"attendanceAnalysis",
+		"verifierType":"id",
+		"verifier":"optAnalysisBy"
+	},
+	{
+		"linkId":"clientsPerTeacher",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	}
+	]
+},
+{
+	"permissions":["Analysis Reports", "Retention Management"], 
+	"checkboxes":["M_RPT_ANALYSIS", "M_RPT_RETENTION_MANAGEMENT"],
+	"verification":
+	[
+	{
+		"linkId":"retention",
+		"verifierType":"name",
+		"verifier":"optInitialSaleLoc"
+	}
+	]
+},
+{
+	"permissions":["Client Indexes"], 
+	"checkboxes":["M_RPT_CLT_INDEX"],
+	"verification":
+	[
+	{
+		"linkId":"clientIndexes",
+		"verifierType":"name",
+		"verifier":"optIndex"
+	}
+	]
+},
+{
+	"permissions":["Payroll Report / Payroll Export / Tips / Assistant / Commission Reports (All Staff)"], 
+	"checkboxes":["M_RPT_IPAY"],
+	"verification":
+	[
+	{
+		"linkId":"commission",
+		"verifierType":"id",
+		"verifier":"commisionReport"
+	},
+	{
+		"linkId":"payroll",
+		"verifierType":"name",
+		"verifier":"optTrnPayList"
+	},
+	{
+		"linkId":"payrates",
+		"verifierType":"id",
+		"verifier":"payRatesReportHeader"
+	},
+	{
+		"linkId":"tips",
+		"verifierType":"",
+		"verifier":""
+	},
+	{
+		"linkId":"payrollExportSetup",
+		"verifierType":"name",
+		"verifier":"optFilterPayType"
+	}
+	]
+},
+{
+	"permissions":["Staff Performance / Appointment Metrics / Retail Sales Performance "], 
+	"checkboxes":["M_RPT_TRN_PERFORMANCE"],
+	"verification":
+	[
+	{
+		"linkId":"appointmentMetrics",
+		"verifierType":"id",
+		"verifier":"requiredtxtDateStart"
+	},
+	{
+		"linkId":"performance",
+		"verifierType":"className",
+		"verifier":"rpt-action-button"
+	},
+	{
+		"linkId":"retailSalesPerformance",
+		"verifierType":"id",
+		"verifier":"optSaleAssignTo"
+	}
+	]
+},
+{
+	"permissions":["Online Metrics"], 
+	"checkboxes":["M_RPT_METRICS"],
+	"verification":
+	[
+	{
+		"linkId":"onlineMetrics",
+		"verifierType":"className",
+		"verifier":"headText"
+	}
+	]
+},
+{
+	"permissions":["Retention Management"], 
+	"checkboxes":["M_RPT_RETENTION_MANAGEMENT"],
+	"verification":
+	[
+	{
+		"linkId":"retentionManagement",
+		"verifierType":"id",
+		"verifier":"retentionMgmtReportHeader"
+	}
+	]
+},
+{
+	"permissions":["Entry Logs"], 
+	"checkboxes":["M_RPT_LOGS"],
+	"verification":
+	[
+	{
+		"linkId":"entryLogs",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	}
+	]
+},
+{
+	"permissions":["Entry Logs", "Staff Activity"], 
+	"checkboxes":["M_RPT_LOGS", "M_RPT_DATAACCESS"],
+	"verification":
+	[
+	{
+		"linkId":"staffActivity",
+		"verifierType":"id",
+		"verifier":"staffActivityTag"
+	}
+	]
+},
+{
+	"permissions":["Membership Reports"], 
+	"checkboxes":["M_RPT_MEMBERS"],
+	"verification":
+	[
+	{
+		"linkId":"membership",
+		"verifierType":"name",
+		"verifier":"optCompare"
+	},
+	{
+		"linkId":"newMembers",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	}
+	]
+},
+{
+	"permissions":["Online Store Reports"], 
+	"checkboxes":["M_RPT_ONLINESTORE"],
+	"verification":
+	[
+	{
+		"linkId":"manageOnlineOrders",
+		"verifierType":"name",
+		"verifier":"requiredtxtDateStart"
+	}
+	]
+},
+{
+	"permissions":["Tasks"], 
+	"checkboxes":["M_RPT_TASKS"],
+	"verification":
+	[
+	{
+		"linkId":"tasks",
+		"verifierType":"id",
+		"verifier":"staffTasks"
+	}
+	]
+},
+{
+	"permissions":["Clock in/out"], 
+	"checkboxes":["M_TIMECLOCK_SELF"],
+	"verification":
+	[
+	{
+		"linkId":"timeClock",
+		"verifierType":"name",
+		"verifier":"optDailySubtotal"
+	}
+	]
+},
+{
+	"permissions":["Contact log analysis report"], 
+	"checkboxes":["M_RPT_CONLOG"],
+	"verification":
+	[
+	{
+		"linkId":"contactLogs",
+		"verifierType":"name",
+		"verifier":"optTrainer"
+	}
+	]
+},
+{
+	"permissions":["Sales forecast report"], 
+	"checkboxes":["M_RPT_SFORECAST"],
+	"verification":
+	[
+	{
+		"linkId":"salesForecasting",
+		"verifierType":"name",
+		"verifier":"optRep"
+	}
+	]
+}
+]

@@ -1,0 +1,172 @@
+[
+    {
+    "TabName":"Sales", 
+    "ReportNames": [
+        "Daily Closeout",
+        "Cash Drawer",
+        "Prospects",
+        "Rewards",
+        "Sales",
+        "Sales by Service",
+        "Sales by Category",
+        "Sales by Rep",
+        "Contract Sales",
+        "Gift Cards",
+        "Revenue by Class",
+        "Outstanding Series",
+        "Sales Forecast",
+        "Gift Card Analysis",
+        "Earned Revenue",
+        "Best Sellers",
+        "Average Revenue Analysis",
+        "Attendance",
+        "Returns",
+        "Sales Tax",
+        "Voided Sales"
+        ],
+    "Subtabs":
+        {
+        "All Sales Reports":
+            [
+            "Daily Closeout",
+            "Cash Drawer",
+            "Prospects",
+            "Rewards",
+            "Sales",
+            "Sales by Service",
+            "Sales by Category",
+            "Sales by Rep",
+            "Contract Sales",
+            "Gift Cards",
+            "Revenue by Class",
+            "Outstanding Series",
+            "Sales Forecast",
+            "Gift Card Analysis",
+            "Earned Revenue",
+            "Best Sellers",
+            "Average Revenue Analysis",
+            "Attendance",
+            "Returns",
+            "Sales Tax",
+            "Voided Sales"
+            ],
+        "Administrative":
+            [
+            "Daily Closeout",
+            "Cash Drawer",
+            "Prospects",
+            "Reqards"
+            ],
+        "General Sales":
+            [
+            "Sales",
+            "Sales by Service",
+            "Sales by Category",
+            "Gift Cards",
+            "Sales by Rep",
+            "Contract Sales"
+            ],
+        "Sales Analysis":
+            [
+            "Attendance With Revenue",
+            "Revenue by Class",
+            "Outstanding Series",
+            "Sales Forecast",
+            "Gift Card Analysis",
+            "Earned Revenue",
+            "Best Sellers",
+            "Average Revenue Analysis"
+            ],
+        "Post Sale":
+            [
+            "Returns",
+            "Sales Tax",
+            "Voided Sales"
+            ]           
+        }
+    },
+    {
+    "TabName":"Payment Processing",
+    "ReportNames": [
+        "Autopay CC Expirations",
+        "Autopay Detail",
+        "Autopay Expirations",
+        "Autopay Summary",
+        "Approved Transactions",
+        "Pending Transactions",
+        "Voided or Rejected Transactions",
+        "Settled Transactions"
+    ]
+    },
+    {
+    "TabName":"Clients",
+    "ReportNames": [
+        "Series Expiration",
+        "Last Visit",
+        "Visits Remaining",
+        "First Visit",
+        "No Return",
+        "Cancellations",
+        "Client Arrivals",
+        "Retention",
+        "No Shows",
+        "Attendance",
+        "Retention Management",
+        "Martial Arts Belt Promotion",
+        "Online Metrics",
+        "Entry Logs",
+        "Membership",
+        "Mailer and Data Exports",
+        "Big Spenders",
+        "New Members",
+        "Client Indexes",
+        "Promotions",
+        "GeoAnalytics",
+        "Referral Sources",
+        "Referrers",
+        "Account Balances",
+        "Unpaids",
+        "Contact Logs",
+        "Event Payments",
+        "Clients per Teacher"
+    ]
+    },
+    {
+    "TabName":"Staff",
+    "ReportNames": [
+        "Performance",
+        "Retail Sales Performance",
+        "Appointment Metrics",
+        "Clients per Teacher",
+        "Trainer Conversions",
+        "Payroll",
+        "Commission",
+        "Pay Rates",
+        "Tips",
+        "Payroll Export Setup",
+        "Time Clock",
+        "Assistants",
+        "Schedule at a Glance",
+        "Staff Schedule",
+        "Phone Book",
+        "Staff Activity",
+        "Tasks"
+    ]
+    },
+    {
+    "TabName":"Inventory",
+    "ReportNames": [
+        "Inventory on Hand",
+        "Inventory Age",
+        "Inventory Change Log",
+        "Manage Online Orders",
+        "Cost of Goods Sold",
+        "Sales by Product",
+        "Sales by Supplier",
+        "Retail Sales Performance"
+    ]
+    }
+]
+
+
+

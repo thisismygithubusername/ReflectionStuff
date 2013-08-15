@@ -9,24 +9,23 @@ namespace TestReflection
 {
     public class MbTestPackage
     {
-        public MbTestPackage(IEnumerable<MemberInfo> members )
-        {
-            ConverMembersIntoTests(members);
-        }
 
         public MbTestPackage()
         {
-            //Init();
         }
-
-        public List<MbAutomationTest> AutomationTests { get; set; }
-
-        private  void ConverMembersIntoTests(IEnumerable<MemberInfo> members)
+        public MbTestPackage(IEnumerable<MethodInfo> methods )
         {
-            foreach (var memberInfo in members)
+            AutomationTests = new List<MbAutomationTest>();
+            foreach (var method in methods)
             {
-                AutomationTests.Add(new MbAutomationTest(memberInfo));
+                AutomationTests.Add(new MbAutomationTest(method));
             }
         }
+
+        public List<MbAutomationTest> AutomationTests
+        {
+            get; set;
+        }
+        
     }
 }

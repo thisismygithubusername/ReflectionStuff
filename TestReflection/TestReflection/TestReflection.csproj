@@ -47,10 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyLoading\AssemblyLoader.cs" />
+    <Compile Include="AssemblyLoading\DefaultAssemblies.cs" />
+    <Compile Include="AssemblyLoading\Extensions.cs" />
     <Compile Include="GetTetsts.cs" />
     <Compile Include="MBAutomationTest.cs" />
     <Compile Include="MBTestPackage.cs" />
+    <Compile Include="OldGetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestFilter.cs" />
+    <Compile Include="Tests\ReflectionTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

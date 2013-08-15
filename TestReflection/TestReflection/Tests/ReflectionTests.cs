@@ -13,9 +13,9 @@ namespace TestReflection.Tests
         [Test]
         public static void TestThisThing()
         {
-            var assemblyLoader = new AssemblyLoader();
-            assemblyLoader.LoadAssembly("Salon", DefaultAssemblies.Assemblylocationz);
-            var package = GetTests.All(assemblyLoader.LoadedAssemblies["Salon"]);
+            var assemblyLoader = new AssemblyLoader("Salon");
+            assemblyLoader.LoadAssembly(DefaultAssemblies.Assemblylocationz);
+            var package = GetTests.All(assemblyLoader.LoadedAssembly);
             var methodinfo = package.AutomationTests.First();
             var method = methodinfo.Name;
         }

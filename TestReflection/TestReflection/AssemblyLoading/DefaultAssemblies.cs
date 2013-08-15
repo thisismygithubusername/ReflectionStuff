@@ -8,9 +8,11 @@ namespace TestReflection.AssemblyLoading
 
         public static readonly string Assemblylocationz =
             _relativePath + "\\Debug\\MBRegressionLibrary.Tests.dll";
-        // @"GitHub\mbregressiontests\CSharp\Regression.Tests\bin\Debug\Regression.Tests.dll");
-        //public static string Assemblylocationz =
-        //    "C:\\Users\\DaKastserMeister/Documents/GitHub/mbregressiontests/CSharp/Regression.Tests/bin/Debug/Regression.Tests.dll";
 
+        public static readonly string AssemblyMarshalPath =
+            _relativePath + "\\lib\\AssemblyMarhsall.dll";
+
+        public static readonly string AssemblyMarshallDll =
+            _relativePath + "\\lib\\AssemblyMarhsall.dll"; 
     }
 }

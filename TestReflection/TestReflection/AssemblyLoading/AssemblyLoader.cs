@@ -1,57 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using AssemblyMarhsall;
 
 namespace TestReflection.AssemblyLoading
 {
     public class AssemblyLoader
     {
-        public AssemblyLoader()
+        public AssemblyLoader(string name)
         {
-            Domain = AppDomain.CreateDomain("ReflectionEnvironment");
-            LoadedAssemblies = new Dictionary<string, Assembly>();
+
+            Domain = AppDomain.CreateDomain(name);
+            var assem = AssemblyName.GetAssemblyName(DefaultAssemblies.AssemblyMarshallDll);
+            FullName = assem.FullName;
+            Domain.Load(assem);
         }
 
-        public Dictionary<string, Assembly> LoadedAssemblies { get; set; } 
-
+        private string MarshallDirectory
+        {
+            get { return DefaultAssemblies.AssemblyMarshalPath; } 
+        }
+        public string FullName { get; set; }
+        public Assembly LoadedAssembly { get; set; } 
+    
         private AppDomain Domain
         {
             get; set;
         }
 
-        public int LoadCount
+        public bool LoadAssembly(string assemblyPath)
         {
-            get { return LoadedAssemblies.Count; } 
-        }
-
-        public bool Full
-        {
-            get { return LoadedAssemblies.Count == 5; }
-        }
-
-        public bool LoadAssembly(string key, string assemblyPath)
-        {
+            var assemblyMarshall = (AssemblyMarshall)Domain.CreateInstanceFromAndUnwrap(DefaultAssemblies.AssemblyMarshallDll, "AssemblyMarhsall.AssemblyMarshall");
+            assemblyMarshall.LoadDirectory = GenerateDirectoryPath(Assembly.GetExecutingAssembly().CodeBase);
+            Domain.AssemblyResolve += assemblyMarshall.CurrentDomainAssemblyResolve;
             try
             {
-                Domain.Load(assemblyPath);
+                LoadedAssembly = Domain.Load(AssemblyName.GetAssemblyName(assemblyPath));
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Data);
                 return false;
             }
-            LoadedAssemblies.Add(key, Domain.Load(assemblyPath));
             return true;
         }
 
-        public void Release()
+        private static string GenerateDirectoryPath(string assemblyPath)
         {
-            AppDomain.Unload(Domain);
-            Domain = AppDomain.CreateDomain("NewReflectionEnvironment");
-            LoadedAssemblies = new Dictionary<string, Assembly>();
+            var splitPath = assemblyPath.Split('/');
+            var path = "";
+            for (int i = 0; i < splitPath.Length - 1; i++)
+            {
+                path += splitPath[i] + "/";
+            }
+            return path;
         }
+
+
     }
 }

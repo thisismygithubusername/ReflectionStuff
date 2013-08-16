@@ -10,9 +10,9 @@ namespace TestReflection.AssemblyLoading
             _relativePath + "\\Debug\\MBRegressionLibrary.Tests.dll";
 
         public static readonly string AssemblyMarshalPath =
-            _relativePath + "\\lib\\AssemblyMarhsall.dll";
+            _relativePath + "\\lib\\DynamicAssemblyLoader.dll";
 
-        public static readonly string AssemblyMarshallDll =
-            _relativePath + "\\lib\\AssemblyMarhsall.dll"; 
+        public static readonly string AssemblyLoader =
+            "DynamicAssemblyLoader.dll"; 
     }
 }

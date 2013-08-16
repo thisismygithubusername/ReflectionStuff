@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Mono.Cecil;
 
 namespace TestReflection
 {
@@ -11,18 +12,22 @@ namespace TestReflection
     {
         public MbAutomationTest(MethodInfo method)
         {
-            MethodInfo = method;
             Name = method.Name;
             Class = method.ReflectedType.Name;
             Namespace = method.ReflectedType.FullName.Replace("." + Class, String.Empty);
             Binary = method.Module.Name;
             Folder = Namespace.Replace(Binary.Replace("dll", String.Empty), String.Empty);
-            CustomAttributes = method.CustomAttributes.ToList();
+            //CustomAttributes = method.CustomAttributes.ToList();
         }
 
-        public MethodInfo MethodInfo
+        public MbAutomationTest(MethodDefinition method)
         {
-            get; set;
+            Name = method.Name;
+            Class = method.DeclaringType.Name;
+            Namespace = method.DeclaringType.FullName.Replace("." + Class, String.Empty);
+            Binary = method.Module.Name;
+            Folder = Namespace.Replace(Binary.Replace("dll", String.Empty), String.Empty);
+            CustomAttributes = method.CustomAttributes.ToList();
         }
 
         public string Binary
@@ -35,7 +40,7 @@ namespace TestReflection
             get; set;
         }
 
-        public List<CustomAttributeData> CustomAttributes
+        public List<CustomAttribute> CustomAttributes
         {
             get; set;
         } 
@@ -60,10 +65,19 @@ namespace TestReflection
             get; set;
         }
 
-        public Module GetBinaryModule()
+
+    }
+
+    public class CustomAttributeInfo : ICustomAttribute 
+    {
+        public CustomAttributeInfo(CustomAttributeData data)
         {
-            return MethodInfo.Module;
+             
         }
 
+        public CustomAttributeInfo(CustomAttribute attribute)
+        {
+
+        }
     }
 }

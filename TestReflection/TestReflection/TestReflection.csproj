@@ -35,11 +35,23 @@
     </Reference>
     <Reference Include="Gallio, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\OptimusRunner\Optimus\Optimus\bin\Debug\Gallio.dll</HintPath>
+      <HintPath>..\..\..\OptimusRunner\Optimus\Optimus\bin\Debug\Gallio.dll</HintPath>
     </Reference>
     <Reference Include="MbUnit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ReplaceSqProjects\MbUnit.dll</HintPath>
+      <HintPath>..\..\..\ReplaceSqProjects\MbUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,27 +60,24 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions">
+      <HintPath>..\packages\xunit.abstractions.2.0.0-alpha-build2503\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit2">
+      <HintPath>..\packages\xunit.2.0.0-alpha-build2503\lib\net45\xunit2.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDomainLibrary\DomainManager.cs" />
-    <Compile Include="AppDomainLibrary\LoadingMarshall.cs" />
-    <Compile Include="AssemblyLoading\AssemblyProxy.cs" />
-    <Compile Include="AssemblyLoading\AssemblyProxyWrapper.cs" />
-    <Compile Include="AssemblyLoading\CrayAssemblyLoader.cs" />
-    <Compile Include="AssemblyLoading\DefaultAssemblies.cs" />
-    <Compile Include="AssemblyLoading\Extensions.cs" />
-    <Compile Include="AssemblyLoading\SimpleAssemblyLoader.cs" />
+    <Compile Include="DefaultAssemblies.cs" />
     <Compile Include="GetTetsts.cs" />
+    <Compile Include="ICustomAttribute.cs" />
     <Compile Include="MBAutomationTest.cs" />
     <Compile Include="MBTestPackage.cs" />
-    <Compile Include="OldGetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestFilter.cs" />
     <Compile Include="Tests\ReflectionTests.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppDomainLibrary\Structures\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

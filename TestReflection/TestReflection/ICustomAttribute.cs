@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestReflection.AppDomainLibrary
+namespace TestReflection
 {
-    public class DomainManager : MarshalByRefObject
+    interface ICustomAttribute
     {
-        
+         
     }
+
 }
